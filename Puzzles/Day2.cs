@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AOC2021
+﻿namespace AOC2021.Puzzles
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Day2 : BasePuzzle
     {
         private readonly List<(string direction, int amount)> PuzzleInput;

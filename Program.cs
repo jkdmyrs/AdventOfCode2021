@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace AOC2021
+﻿namespace AOC2021
 {
+    using AOC2021.Puzzles;
+    using System;
+    using System.Collections.Generic;
+
     class Program
     {
         static void Main(string[] args)

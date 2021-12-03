@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace AOC2021
+﻿namespace AOC2021.Puzzles
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Day1 : BasePuzzle
     {
         private readonly List<int> PuzzleInput;
