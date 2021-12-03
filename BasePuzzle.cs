@@ -9,7 +9,7 @@
 
         public BasePuzzle(int day, bool practice)
         {
-            _puzzleInput = System.IO.File.ReadAllLines(@$"\\Mac\Home\projects\aoc2021\AOC2021\input\{day.ToString() + (practice ? "_practice" : string.Empty)}.txt").ToList();
+            _puzzleInput = System.IO.File.ReadAllLines(@$"\\Mac\Home\projects\aoc2021\input\{day.ToString() + (practice ? "_practice" : string.Empty)}.txt").ToList();
         }
 
         public abstract int Part1Answer { get; }

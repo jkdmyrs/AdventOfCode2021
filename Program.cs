@@ -16,14 +16,13 @@ namespace AOC2021
                 new Day2(isPractice),
             };
 
-            int i = 1;
             puzzles.ForEach(puzzle =>
             {
+                int puzzleNumber = int.Parse(puzzle.GetType().Name.Substring(3));
                 Console.WriteLine();
-                Console.WriteLine($"Day {i} Part 1 - {puzzle.Part1Answer}");
-                Console.WriteLine($"Day {i} Part 2 - {puzzle.Part2Answer}");
+                Console.WriteLine($"Day {puzzleNumber} Part 1 - {puzzle.Part1Answer}");
+                Console.WriteLine($"Day {puzzleNumber} Part 2 - {puzzle.Part2Answer}");
                 Console.WriteLine();
-                i++;
             });
 
             Console.WriteLine("Press any key to exit.");
