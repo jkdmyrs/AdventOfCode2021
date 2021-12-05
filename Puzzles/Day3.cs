@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AOC2021.Puzzles
+﻿namespace AOC2021.Puzzles
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Day3 : BasePuzzle
     {
         public Day3(bool practice)

@@ -5,7 +5,7 @@
 
     public abstract class BasePuzzle
     {
-        internal static List<string> _puzzleInput;
+        internal readonly List<string> _puzzleInput;
 
         public BasePuzzle(int day, bool practice)
         {
