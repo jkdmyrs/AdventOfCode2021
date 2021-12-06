@@ -93,7 +93,35 @@
         public int Part2()
         {
             InitBoards();
-            return 0;
+            List<(int number, bool marked)> lastWinner = new();
+            int lastDraw = 0;
+            foreach (int draw in _draws)
+            {
+                for (int j = _boards.Count - 1; j >= 0; j--)
+                {
+                    for (int i = 0; i < _boards[j].Count; i++)
+                    {
+                        if (_boards[j][i].number == draw)
+                        {
+                            var spot = _boards[j][i];
+                            spot.marked = true;
+                            _boards[j][i] = spot;
+                        }
+                    }
+                    if (IsWinner(_boards[j]))
+                    {
+                        lastWinner = _boards[j];
+                        lastDraw = draw;
+                        _boards.RemoveAt(j);
+                    }
+                    if (_boards.Count == 0)
+                    {
+                        IEnumerable<int> unmarked = lastWinner.Where(x => x.marked == false).Select(x => x.number);
+                        return unmarked.Sum() * lastDraw;
+                    }
+                }
+            }
+            throw new Exception("no answer");
         }
     }
 }
