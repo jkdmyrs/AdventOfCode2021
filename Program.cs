@@ -27,10 +27,19 @@
         private static void RunPuzzle(BasePuzzle puzzle)
         {
             int puzzleNumber = int.Parse(puzzle.GetType().Name.Substring(3));
-            Console.WriteLine();
-            Console.WriteLine($"Day {puzzleNumber} Part 1 - {puzzle.Part1Answer}");
-            Console.WriteLine($"Day {puzzleNumber} Part 2 - {puzzle.Part2Answer}");
-            Console.WriteLine();
+            if (puzzle.Skip)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Skipping Day {puzzleNumber} because it runs long");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Day {puzzleNumber} Part 1 - {puzzle.Part1Answer}");
+                Console.WriteLine($"Day {puzzleNumber} Part 2 - {puzzle.Part2Answer}");
+                Console.WriteLine();
+            }
         }
     }
 }

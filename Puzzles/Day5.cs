@@ -10,7 +10,7 @@
         private readonly List<((int x1, int y1) start, (int x2, int y2) end)> _straightLines;
 
         public Day5(bool practice)
-            : base(5, practice)
+            : base(5, practice, true)
         {
             _allLines = _puzzleInput.Select(x =>
             {
