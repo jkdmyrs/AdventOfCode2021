@@ -22,9 +22,9 @@
             _straightLines = _allLines.Where(x => x.start.x1 == x.end.x2 || x.start.y1 == x.end.y2).ToList();
         }
 
-        public override int Part1Answer => Part1();
+        public override string Part1Answer => Part1().ToString();
 
-        public override int Part2Answer => Part2();
+        public override string Part2Answer => Part2().ToString();
 
         private bool IsPointOnLine(((int x1, int y1) start, (int x2, int y2) end) line, (int x, int y) point)
         {

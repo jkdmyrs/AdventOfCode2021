@@ -11,9 +11,9 @@
         {
         }
 
-        public override int Part1Answer => Part1();
+        public override string Part1Answer => Part1().ToString();
 
-        public override int Part2Answer => Part2();
+        public override string Part2Answer => Part2().ToString();
 
         private int BinaryToInt(List<char> binary)
         {

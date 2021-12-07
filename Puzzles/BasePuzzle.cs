@@ -15,7 +15,7 @@
 
         public bool Skip { get; private set; }
 
-        public abstract int Part1Answer { get; }
-        public abstract int Part2Answer { get; }
+        public abstract string Part1Answer { get; }
+        public abstract string Part2Answer { get; }
     }
 }
