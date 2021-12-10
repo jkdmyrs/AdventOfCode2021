@@ -86,10 +86,6 @@
 
         private HashSet<(int row, int col)> FindBasin((int row, int col) lowpoint, HashSet<(int row, int col)> basinLocations)
         {
-            // check each direction
-            // if it's < 9 and > lowpoint, add 1 to basin size, recursively check it's neighbors
-            // left col
-
             var adjacents = AdjacentLocations(lowpoint.row, lowpoint.col);
             adjacents.ForEach(x =>
             {
