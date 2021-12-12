@@ -21,7 +21,7 @@
             List<BasePuzzle> puzzles = new();
             List<Type> puzzleClasses = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).Where(t => t.IsSubclassOf(typeof(BasePuzzle))).ToList();
             puzzleClasses.ForEach(puzzle => puzzles.Add((BasePuzzle)puzzle.GetConstructor(new[] { typeof(bool) }).Invoke(new object[] { isPractice })));
-            return puzzles;
+            return puzzles.OrderBy(x => int.Parse(x.GetType().Name.Substring(3))).ToList();
         }
 
         private static void RunPuzzle(BasePuzzle puzzle)
