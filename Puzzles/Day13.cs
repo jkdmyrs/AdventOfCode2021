@@ -98,7 +98,7 @@
                 }
                 Console.WriteLine(lineText);
             }
-            return "answer printed in console";
+            return "^";
         }
     }
 }
