@@ -1,7 +1,6 @@
 ﻿namespace AOC2021.Puzzles
 {
     using System.Collections.Generic;
-    using System.Diagnostics;
     using System.Linq;
 
     public class Day14 : BasePuzzle
